@@ -4,7 +4,7 @@ import twitter from '../src/twitter/index';
 function twitterObject(text) {
   return {
     text
-  }
+ }
 }
 
 describe('Twitter tests', function() {
@@ -17,4 +17,5 @@ describe('Twitter tests', function() {
       done();
     })
   });
+
 });
