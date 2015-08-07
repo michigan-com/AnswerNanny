@@ -29,10 +29,6 @@ function o(input, fileName, expectedAnswer) {
         }
       }
 
-      for (let message of obj.log || []) {
-        console.log(message);
-      }
-
       // get out of the helpful swallowing of errors that promises do
       // TODO: find out why the catch block doesn't catch them
       process.nextTick(() => {

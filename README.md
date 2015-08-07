@@ -28,3 +28,7 @@ Recording missing responses into `test/responses/testname.xml`:
 Re-recording all responses:
 
     NETMODE=rerecord mocha
+
+To see more output, set `DEBUG`:
+
+    DEBUG='wolfram:*' mocha
