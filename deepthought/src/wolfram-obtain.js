@@ -1,11 +1,12 @@
 import querystring from 'querystring';
 import request from 'request-promise';
 import getRequiredEnvVar from './util/env-var';
+let debug = require('debug')('wolfram:calls');
 
 const WOLFRAM_APPID = getRequiredEnvVar('WOLFRAM_APPID');
 
 export default async function obtainWolframAlphaResponse(input) {
-  console.log('Asking Wolfram Alpha: %s', input);
+  debug('Asking Wolfram Alpha: %s', input);
   return await request(generateWolframAlphaUrl(input));
 }
 
