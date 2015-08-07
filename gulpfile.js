@@ -58,7 +58,7 @@ gulp.task('browserify', function(cb) {
 });
 
 // This gulp task now restarts after each JS error yaaaaay
-gulp.task('watch', function() {
+gulp.task('watch', ['deepthought-watch'], function() {
   // https://gist.github.com/RnbWd/2456ef5ce71a106addee
   each(jsBundle, function(fname) {
     gutil.log('Watching ' + fname + ' ...');
@@ -88,7 +88,7 @@ gulp.task('babel', function() {
   babelBundle();
 });
 
-gulp.task('default', ['sass', 'babel', 'browserify']);
+gulp.task('default', ['sass', 'babel', 'browserify', 'deepthought-babel']);
 
 gulp.task('users', function(cb) {
   var db = require('./dist/db');
@@ -118,6 +118,20 @@ gulp.task('resetDb', function(cb) {
       });
     });
   });
+});
+
+gulp.task('deepthought', ['deepthought-babel']);
+
+gulp.task('deepthought-babel', function() {
+  return gulp.src('deepthought/src/**/*.js')
+    .pipe(babel({
+      optional: ['runtime', 'es7.asyncFunctions', 'es7.objectRestSpread', 'es7.decorators'],
+    }))
+    .pipe(gulp.dest('./deepthought/lib'));
+});
+
+gulp.task('deepthought-watch', ['deepthought-babel'], function() {
+  gulp.watch('./deepthought/src/**/*.js', ['deepthought-babel']);
 });
 
 // https://gist.github.com/RnbWd/2456ef5ce71a106addee
