@@ -1,6 +1,18 @@
 'use strict';
 import app from './app';
 import winston from 'winston';
+import mongoose from 'mongoose';
+import { db } from '../config';
+import twitter from './twitter';
+import { connect, disconnect } from './db';
+
+mongoose.connection.on('error', winston.error);
+
+connect(db).then(function() {
+  twitter.streamTweets();
+}).catch(function(err) {
+  throw new Error(err);
+});
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);

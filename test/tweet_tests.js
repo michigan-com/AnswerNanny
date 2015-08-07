@@ -1,21 +1,39 @@
 import {ok, equal, deepEqual} from 'assert';
 import twitter from '../src/twitter/index';
+import {stub} from 'sinon';
+import Twit from 'twit';
 
-function twitterObject(text) {
+
+function defaultTweet() {
   return {
-    text
- }
+    user: {
+      id: -1,
+      screen_name: 'testName'
+    },
+    text: 'who is the governor of Michigan?'
+  }
 }
 
 describe('Twitter tests', function() {
 
   it ('Tests tweetReceived', function(done) {
-    let tweet = twitterObject('what is the governor of Michigan?')
     let answer = 'Rick Snyder';
-    twitter.tweetReceived(tweet, function(obj) {
+    twitter.tweetReceived(defaultTweet(), function(obj) {
       equal(obj.answer, answer);
       done();
-    })
+    });
   });
 
+  it('Tests the formatting of a tweet', function(done) {
+    let tweet = defaultTweet()
+    let answer = 'Rick Snyder';
+    let expectedTweet = `@${tweet.user.screen_name} ${answer}`
+
+    twitter.tweetReceived(tweet, function(obj) {
+      let responseTweet = twitter.formatTweetForReply(tweet, obj);
+      equal(responseTweet.status, expectedTweet);
+      done();
+    });
+
+  });
 });

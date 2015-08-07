@@ -1,6 +1,7 @@
 import Twit from 'twit';
 import {twitter} from '../../config';
 import computeAnswer from '../../deepthought/lib/index';
+import { NannyAnswer } from '../db';
 
 let NANNY_USER_ID = 2317922462;
 let NANNY_USER_ID_STR = '2317922462';
@@ -11,8 +12,8 @@ function init() {
 
 }
 
-function postTweet(status='Hello World') {
-  T.post('statuses/update', { status }, function(err, data, resp) {
+function postTweet(tweet={status: 'Hello World'}) {
+  T.post('statuses/update', tweet, function(err, data, resp) {
     if (err) throw Error(err);
     console.log(data);
   });
@@ -33,18 +34,23 @@ function streamTweets(track='@AnswerNanny') {
 }
 
 function tweetReceived(tweet, cb) {
-  function defaultCallback(obj) {
-    let answer = obj.answer ? obj.answer : 'Not sure!';
-    T.post('statuses/update', {
-      status: `${answer} @${tweet.user.screen_name} https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`,
-      in_reply_to_status_id: tweet.is_str
-    }, function(err, data, resp){
-      if (err) throw Error(err);
+  function reply(obj) {
+    let responseTweet = formatTweetForReply(tweet, obj)
+    postTweet(responseTweet);
 
-      console.log(data);
-    })
+    // Save in mongo
+    let answer = NannyAnswer({
+      tweet,
+      wolfram: obj,
+      response: responseTweet
+    });
+
+    answer.save(function(err) {
+      if (err) throw new Error(err);
+    });
   }
-  if (typeof cb === 'undefined') cb = defaultCallback;
+
+  if (typeof cb === 'undefined') cb = reply;
 
   if (tweet.user.id === NANNY_USER_ID) {
     console.log('Tweet from nanny, ignoring');
@@ -56,10 +62,29 @@ function tweetReceived(tweet, cb) {
   computeAnswer(text).then(cb);
 }
 
+/**
+ * Given a tweet and a Wolfram response, compose the tweet to reply to the user
+ *
+ * @param {Object} tweet - Tweet object
+ * @param {Object} obj - computeAnswer() return object
+ */
+function formatTweetForReply(tweet, obj) {
+  let answer = obj.answer ? obj.answer : 'Not sure!';
+
+  let sliceEnd = 140 - (tweet.user.screen_name.length + 2); // 2 == @ and ' '
+  answer = answer.slice(0, sliceEnd);
+
+  return {
+    status: `@${tweet.user.screen_name} ${answer}`,
+    in_reply_to_status_id: tweet.id_str
+  }
+}
+
 module.exports = {
   init,
   postTweet,
   getTweets,
   streamTweets,
-  tweetReceived
+  tweetReceived,
+  formatTweetForReply
 }
