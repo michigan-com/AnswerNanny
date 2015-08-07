@@ -8,10 +8,7 @@
   },
   "repository": {},
   "devDependencies": {
-    "babel": "^5.8.21",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.0",
-    "vinyl-source-stream": "^1.1.0"
+    "babel": "^5.8.21"
   },
   "dependencies": {
     "babel-runtime": "^5.8.20",
