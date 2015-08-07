@@ -6,6 +6,7 @@ import express from 'express';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
+import twitter from './twitter';
 
 var app = express();
 var BASE_DIR = path.dirname(__dirname);
@@ -18,6 +19,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(BASE_DIR, 'public')));
+
+twitter.streamTweets();
 
 app.get('/', function(req, res) {
   res.render('index')
