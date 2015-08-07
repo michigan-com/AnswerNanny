@@ -1,0 +1,22 @@
+{
+  "name": "deep-thought",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "description": "The producer of the ultimate answers",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {},
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.20",
+    "request": "^2.60.0",
+    "wolfram": "^0.3.2",
+    "xml2js": "^0.4.10"
+  }
+}

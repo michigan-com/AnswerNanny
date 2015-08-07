@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='7'
+    datatypes='City,Country,Leader,People,USState'
+    timedout=''
+    timedoutpods=''
+    timing='2.516'
+    parsetiming='0.401'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa7161g1548025idgd0a800003if26hgehi3f2i5f'
+    host='http://www4b.wolframalpha.com'
+    server='22'
+    related='http://www4b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa7171g1548025idgd0a800002gh8h6e438be6a07&amp;s=22'
+    version='2.6'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>United States | Michigan | Governor</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>Rick Snyder</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Basic information'
+     scanner='Data'
+     id='BasicInformation:LeaderData'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>official position | Governor (Michigan)
+country | United States
+political affiliation | Republican
+start date | 01/01/2011 (4 years 7 months 6 days ago)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Sequence'
+     scanner='Data'
+     id='LeaderSequence'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Saturday, January 1, 2011  to  Friday, August 7, 2015 | Rick Snyder  (Republican)
+Wednesday, January 1, 2003  to  Saturday, January 1, 2011  (8 years) | Jennifer Granholm  (Democratic)
+Tuesday, January 1, 1991  to  Wednesday, January 1, 2003  (12 years) | John Engler  (Republican)
+Saturday, January 1, 1983  to  Tuesday, January 1, 1991  (8 years) | James J. Blanchard  (Democratic)
+Wednesday, January 22, 1969  to  Saturday, January 1, 1983  (13 years 11 months 10 days) | William G. Milliken  (Republican)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='LeaderSequence__More' />
+  </states>
+ </pod>
+ <pod title='Related leaders'
+     scanner='Data'
+     id='GovernmentStructure:LeaderData'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>US representative  (Thursday, January 3, 2013  to  Friday, August 7, 2015) | John Conyers
+US representative  (Thursday, January 3, 2013  to  Friday, August 7, 2015) | Kerry Bentivolio
+US representative  (Thursday, January 3, 2013  to  Friday, August 7, 2015) | Dan Kildee
+US representative  (Tuesday, November 6, 2012  to  Thursday, January 3, 2013) | 
+US representative  (Monday, January 3, 2011  to  Thursday, January 3, 2013) | Hansen Clarke
+US representative  (Monday, January 3, 2011  to  Friday, July 6, 2012) | Thaddeus McCotter
+US representative  (Monday, January 3, 2011  to  Friday, August 7, 2015) | Tim Walberg
+US representative  (Monday, January 3, 2011  to  Friday, August 7, 2015) | Justin Amash
+US representative  (Monday, January 3, 2011  to  Friday, August 7, 2015) | Bill Huizenga
+US representative  (Monday, January 3, 2011  to  Friday, August 7, 2015) | Dan Benishek</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Personal information'
+     scanner='Data'
+     id='LeaderDataPersonalInformationPod:PeopleData'
+     position='600'
+     error='false'
+     numsubpods='2'>
+  <subpod title=''>
+   <plaintext>full name | Richard D. Snyder
+date of birth | 19/08/1958 (age: 56 years)
+place of birth | Battle Creek, Michigan, United States</plaintext>
+  </subpod>
+  <subpod title='Timeline'>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <pod title='Image'
+     scanner='Data'
+     id='Image:PeopleData'
+     position='700'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <sources count='3'>
+  <source url='http://www.wolframalpha.com/sources/LeaderDataSourceInformationNotes.html'
+      text='Leader data' />
+  <source url='http://www.wolframalpha.com/sources/PeopleDataSourceInformationNotes.html'
+      text='People data' />
+  <source url='http://www.wolframalpha.com/sources/USStateDataSourceInformationNotes.html'
+      text='US state data' />
+ </sources>
+</queryresult>
