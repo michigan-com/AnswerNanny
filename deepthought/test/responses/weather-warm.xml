@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='3'
+    datatypes='Weather'
+    timedout='Data,Character'
+    timedoutpods=''
+    timing='3.823'
+    parsetiming='0.266'
+    parsetimedout='false'
+    recalculate='http://www5b.wolframalpha.com/api/v2/recalc.jsp?id=MSPa62911d420cagb35f359e000050f71c791haa715c&amp;s=26'
+    id='MSPa62921d420cagb35f359e000058d9abhdg3h653g9'
+    host='http://www5b.wolframalpha.com'
+    server='26'
+    related='http://www5b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa62931d420cagb35f359e00005cc4ihfe560ccf69&amp;s=26'
+    version='2.6'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>temperature</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>15 °C  (wind chill: 15 °C)
+(40 minutes ago)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Show non-metric'
+       input='Result__Show non-metric' />
+  </states>
+ </pod>
+ <pod title='History &amp; forecast'
+     scanner='Data'
+     id='TemperatureChart:WeatherData'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>
+  |  |   |  
+low: 8 °C
+Fri, Aug 7, 4:00am | average high:  | 21 °C
+average low:  | 11 °C | high: 26 °C
+Wed, Aug 5, 1:00pm, ...
+ |   |  </plaintext>
+  </subpod>
+  <states count='3'>
+   <statelist count='9'
+       value='Current week'
+       delimiters=''>
+    <state name='Current week'
+        input='TemperatureChart:WeatherData__Current week' />
+    <state name='Current day'
+        input='TemperatureChart:WeatherData__Current day' />
+    <state name='Next week'
+        input='TemperatureChart:WeatherData__Next week' />
+    <state name='Past week'
+        input='TemperatureChart:WeatherData__Past week' />
+    <state name='Past month'
+        input='TemperatureChart:WeatherData__Past month' />
+    <state name='Past year'
+        input='TemperatureChart:WeatherData__Past year' />
+    <state name='Past 5 years'
+        input='TemperatureChart:WeatherData__Past 5 years' />
+    <state name='Past 10 years'
+        input='TemperatureChart:WeatherData__Past 10 years' />
+    <state name='All'
+        input='TemperatureChart:WeatherData__All' />
+   </statelist>
+   <state name='Show non-metric'
+       input='TemperatureChart:WeatherData__Show non-metric' />
+   <state name='More'
+       input='TemperatureChart:WeatherData__More' />
+  </states>
+ </pod>
+ <sources count='4'>
+  <source url='http://www.wolframalpha.com/sources/CityDataSourceInformationNotes.html'
+      text='City data' />
+  <source url='http://www.wolframalpha.com/sources/CountryDataSourceInformationNotes.html'
+      text='Country data' />
+  <source url='http://www.wolframalpha.com/sources/WeatherDataSourceInformationNotes.html'
+      text='Weather data' />
+  <source url='http://www.wolframalpha.com/sources/WeatherForecastDataSourceInformationNotes.html'
+      text='Weather forecast data' />
+ </sources>
+</queryresult>

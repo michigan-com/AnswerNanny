@@ -11,6 +11,7 @@ if (MODES.indexOf(mode) < 0) {
 
 describe('Deep Thought', function() {
   o("who is the governor of Michigan?", 'governor.xml', "Rick Snyder");
+  o("how warm is it?", 'weather-warm.xml', "15 °C  (wind chill: 15 °C)\n(40 minutes ago)");
 });
 
 function o(input, fileName, expectedAnswer) {
