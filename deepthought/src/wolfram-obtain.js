@@ -21,15 +21,3 @@ function generateWolframAlphaUrl(input) {
   let qs = querystring.stringify(params);
   return 'http://api.wolframalpha.com/v2/query?' + qs;
 }
-
-function convertXmlToJson(xml) {
-  return new Promise((resolve, reject) => {
-    xml2js.parseString(xml, (err, result) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(result);
-      }
-    });
-  });
-}
