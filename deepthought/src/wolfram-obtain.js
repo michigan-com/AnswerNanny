@@ -6,7 +6,7 @@ const WOLFRAM_APPID = getRequiredEnvVar('WOLFRAM_APPID');
 
 export default async function obtainWolframAlphaResponse(input) {
   console.log('Asking Wolfram Alpha: %s', input);
-  return await request(generateWolframAlphaUrl("who is the governor of Michigan?"));
+  return await request(generateWolframAlphaUrl(input));
 }
 
 function generateWolframAlphaUrl(input) {
