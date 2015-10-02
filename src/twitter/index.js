@@ -28,7 +28,11 @@ function getTweets(q='@AnswerNanny') {
 }
 
 function streamTweets(track='@AnswerNanny') {
-  let stream = T.stream('user', {replies: 'all'});
+  let stream = T.stream('user', {
+    twit_options: {
+      replies: 'all'
+    }
+  });
   stream.on('tweet', tweetReceived);
 }
 
@@ -53,6 +57,11 @@ function tweetReceived(tweet, cb) {
   if (typeof cb === 'undefined') cb = reply;
 
   if (tweet.user.id === NANNY_USER_ID) {
+    return;
+  }
+
+  if (!/\@AnswerNanny/.exec(tweet.text)) {
+    logger('Not an @ reply');
     return;
   }
 
