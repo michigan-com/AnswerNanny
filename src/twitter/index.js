@@ -1,13 +1,14 @@
-import winston from 'winston';
+import debug from 'debug';
 import Twit from 'twit';
 
-import {twitter} from '../../config';
+import { twitter } from '../../config';
 import computeAnswer from '../../deepthought/lib/index';
 import { NannyAnswer } from '../db';
 
 let NANNY_USER_ID = 2317922462;
 let NANNY_USER_ID_STR = '2317922462';
 
+var logger = debug('AnswerNanny:twitter');
 var T = new Twit(twitter);
 
 function init() {
@@ -17,18 +18,12 @@ function init() {
 function postTweet(tweet={status: 'Hello World'}) {
   T.post('statuses/update', tweet, function(err, data, resp) {
     if (err) throw Error(err);
-
-    winston.info('status/update')
-    winston.info(data);
   });
 }
 
 function getTweets(q='@AnswerNanny') {
   T.get('search/tweets', {q}, function(err, data, resp) {
     if (err) throw Error(err);
-
-    winston.info('search/tweets');
-    winston.info(data);
   });
 }
 
@@ -39,9 +34,8 @@ function streamTweets(track='@AnswerNanny') {
 
 function tweetReceived(tweet, cb) {
   function reply(obj) {
-    winston.info('reply()')
-    winston.info(obj);
     let responseTweet = formatTweetForReply(tweet, obj)
+    logger(`Response: ${responseTweet.status}`);
     postTweet(responseTweet);
 
     // Save in mongo
@@ -59,11 +53,10 @@ function tweetReceived(tweet, cb) {
   if (typeof cb === 'undefined') cb = reply;
 
   if (tweet.user.id === NANNY_USER_ID) {
-    winston.info('Tweet from nanny, ignoring');
     return;
   }
 
-  winston.info(`Got a tweet: ${tweet.text}`)
+  logger(`Got a tweet: ${tweet.text}`)
   let text = tweet.text.replace(/\@AnswerNanny /g, '');
   computeAnswer(text).then(cb);
 }

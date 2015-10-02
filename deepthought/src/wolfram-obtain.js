@@ -6,8 +6,9 @@ let debug = require('debug')('wolfram:calls');
 const WOLFRAM_APPID = getRequiredEnvVar('WOLFRAM_APPID');
 
 export default async function obtainWolframAlphaResponse(input) {
+  let url = generateWolframAlphaUrl(input);
   debug('Asking Wolfram Alpha: %s', input);
-  return await request(generateWolframAlphaUrl(input));
+  return await request(url);
 }
 
 function generateWolframAlphaUrl(input) {
