@@ -4,3 +4,4 @@ dist/
 *.swo
 /.env
 config.js
+conf/supervisor.conf
