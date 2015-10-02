@@ -1,4 +1,6 @@
+import winston from 'winston';
 import Twit from 'twit';
+
 import {twitter} from '../../config';
 import computeAnswer from '../../deepthought/lib/index';
 import { NannyAnswer } from '../db';
@@ -15,26 +17,30 @@ function init() {
 function postTweet(tweet={status: 'Hello World'}) {
   T.post('statuses/update', tweet, function(err, data, resp) {
     if (err) throw Error(err);
-    console.log(data);
+
+    winston.info('status/update')
+    winston.info(data);
   });
 }
 
 function getTweets(q='@AnswerNanny') {
   T.get('search/tweets', {q}, function(err, data, resp) {
     if (err) throw Error(err);
-    console.log(data);
+
+    winston.info('search/tweets');
+    winston.info(data);
   });
 }
 
 function streamTweets(track='@AnswerNanny') {
-
   let stream = T.stream('user', {replies: 'all'});
-
   stream.on('tweet', tweetReceived);
 }
 
 function tweetReceived(tweet, cb) {
   function reply(obj) {
+    winston.info('reply()')
+    winston.info(obj);
     let responseTweet = formatTweetForReply(tweet, obj)
     postTweet(responseTweet);
 
@@ -53,11 +59,11 @@ function tweetReceived(tweet, cb) {
   if (typeof cb === 'undefined') cb = reply;
 
   if (tweet.user.id === NANNY_USER_ID) {
-    console.log('Tweet from nanny, ignoring');
+    winston.info('Tweet from nanny, ignoring');
     return;
   }
 
-  console.log(`Got a tweet: ${tweet.text}`)
+  winston.info(`Got a tweet: ${tweet.text}`)
   let text = tweet.text.replace(/\@AnswerNanny /g, '');
   computeAnswer(text).then(cb);
 }
