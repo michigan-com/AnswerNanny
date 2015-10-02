@@ -10,7 +10,7 @@ function defaultTweet() {
       id: -1,
       screen_name: 'testName'
     },
-    text: 'who is the governor of Michigan?'
+    text: '@AnswerNanny who is the governor of Michigan?'
   }
 }
 
