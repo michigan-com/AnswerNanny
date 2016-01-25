@@ -24,10 +24,12 @@
     "gulp-util": "^3.0.6",
     "mongoose": "^4.1.9",
     "plumber": "^0.4.8",
+    "request-promise": "^2.0.0",
     "sinon": "^1.15.4",
     "twit": "^2.1.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "xml2js": "^0.4.16"
   },
   "bugs": {
     "url": "https://github.com/michigan-com/AnswerNanny/issues"
