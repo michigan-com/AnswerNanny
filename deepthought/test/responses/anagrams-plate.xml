@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='2'
+    datatypes=''
+    timedout=''
+    timedoutpods=''
+    timing='0.797'
+    parsetiming='0.355'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa506820e087ace668h797000015c11eha5a0g1ih7'
+    host='http://www4f.wolframalpha.com'
+    server='13'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa506920e087ace668h79700001i4d7f8eab97a305&amp;s=13'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:0.797464'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>anagrams | plate</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Anagrams'
+     scanner='WordPuzzle'
+     id='Anagram'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>l | e | p | t | a
+p | e | t | a | l
+p | l | e | a | t
+t | e | p | a | l</plaintext>
+  </subpod>
+ </pod>
+</queryresult>

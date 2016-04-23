@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='2'
+    datatypes=''
+    timedout=''
+    timedoutpods=''
+    timing='1.917'
+    parsetiming='1.354'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa13481f4bc4e76c596155000042gechc7091f2bcb'
+    host='http://www4f.wolframalpha.com'
+    server='62'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa13491f4bc4e76c59615500003abe8ef41cg8dha1&amp;s=62'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:1.91728'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Michigan  (US state) | Governor | 1st</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>(none)</plaintext>
+  </subpod>
+ </pod>
+ <sources count='2'>
+  <source url='http://www.wolframalpha.com/sources/LeaderDataSourceInformationNotes.html'
+      text='Leader data' />
+  <source url='http://www.wolframalpha.com/sources/USStateDataSourceInformationNotes.html'
+      text='US state data' />
+ </sources>
+</queryresult>

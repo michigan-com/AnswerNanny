@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='2'
+    datatypes='City'
+    timedout='Data,Character'
+    timedoutpods=''
+    timing='7.909'
+    parsetiming='4.06'
+    parsetimedout='false'
+    recalculate='http://www4f.wolframalpha.com/api/v2/recalc.jsp?id=MSPa5671fe9fc028625575d00005gad0h49cb5hh62a&amp;s=28'
+    id='MSPa5681fe9fc028625575d000039b5gh69g2i184e3'
+    host='http://www4f.wolframalpha.com'
+    server='28'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa5691fe9fc028625575d000044cdbf38c0b48e89&amp;s=28'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:7.90864'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>cities | in China
+with city population&gt;1 million people</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>Shanghai  |  Beijing  |  Zhoukou  |  Nanyang  |  Baoding  |  Chengdu  |  Linyi  |  Harbin  |  Tianjin  |  Shijiazhuang  |  Xuzhou  |  Handan  |  Heze  |  Shangqiu  |  Ganzhou  |  Zhumadian  |  Weifang  |  Xinyang  |  Wuhan  |  Jining  |  …   (total: 340)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='Result__More' />
+  </states>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='Clash'
+      word='China'
+      template='Assuming &quot;${word}&quot; is ${desc1}. Use as ${desc2} instead'
+      count='2'>
+   <value name='Country'
+       desc='a country'
+       input='*C.China-_*Country-' />
+   <value name='AdministrativeDivision'
+       desc='an administrative division'
+       input='*C.China-_*AdministrativeDivision-' />
+  </assumption>
+ </assumptions>
+ <sources count='2'>
+  <source url='http://www.wolframalpha.com/sources/CityDataSourceInformationNotes.html'
+      text='City data' />
+  <source url='http://www.wolframalpha.com/sources/CountryDataSourceInformationNotes.html'
+      text='Country data' />
+ </sources>
+</queryresult>

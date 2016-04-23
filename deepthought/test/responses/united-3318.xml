@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='7'
+    datatypes='Airline,WikipediaStats'
+    timedout=''
+    timedoutpods=''
+    timing='10.931'
+    parsetiming='0.202'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa11861c3ge4734f94721e00004g75328d4fae82ii'
+    host='http://www4f.wolframalpha.com'
+    server='7'
+    related=''
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:10.9314'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>United Air Lines Inc.</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Basic information'
+     scanner='Data'
+     id='BasicInformation:AirlineData'
+     position='200'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>carrier code | UA
+name | United Air Lines Inc.
+airline ID | 19977</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Logo'
+     scanner='Data'
+     id='Image:AirlineData'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <imagesource>http://www.airlinelogos.net/displayimage-13-365.html</imagesource>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <pod title='Flight operations data'
+     scanner='Data'
+     id='TotalOperations:AirlineData'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>average daily flights | 1394.3 flights per day
+average daily passengers | 172540 people
+passengers per flight | 124 people
+average passenger capacity | 81%
+weight breakdown | passengers: 85.1%  |  freight: 12.7%  |  mail: 2.13%
+average flight duration | 2.99 hours
+average flight distance | 2255.8 km  (kilometers)
+average daily fuel usage | 17.3 million L  (liters)
+(2008 data based on all flights with US segments)</plaintext>
+  </subpod>
+  <states count='3'>
+   <state name='More'
+       input='TotalOperations:AirlineData__More' />
+   <state name='Show history'
+       input='TotalOperations:AirlineData__Show history' />
+   <state name='Show non-metric'
+       input='TotalOperations:AirlineData__Show non-metric' />
+  </states>
+ </pod>
+ <pod title='On-time performance'
+     scanner='Data'
+     id='DomesticPerformance:AirlineData'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>domestic flights on-time | departures: 74.8%  |  arrivals: 71.6%
+average domestic delays | departures: 14 minutes  |  arrivals: 11 minutes
+causes of delay | delayed aircraft: 45%  |  carrier decision: 24%  |  air traffic: 28%  |  weather: 3%  |  security: 0.023%
+domestic flights cancelled | 2.34%  (10541 per year; 28.8 per day)
+domestic flights diverted | 0.22%
+average domestic flight duration | 2.41 hours
+average domestic flight distance | 1736 km  (kilometers)
+(2008 data based on all flights entirely within the US)</plaintext>
+  </subpod>
+  <states count='3'>
+   <state name='More'
+       input='DomesticPerformance:AirlineData__More' />
+   <state name='Show history'
+       input='DomesticPerformance:AirlineData__Show history' />
+   <state name='Show non-metric'
+       input='DomesticPerformance:AirlineData__Show non-metric' />
+  </states>
+ </pod>
+ <pod title='Wikipedia summary'
+     scanner='Data'
+     id='WikipediaSummary:AirlineData'
+     position='600'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='WikipediaSummary:AirlineData__More' />
+  </states>
+  <infos count='1'>
+   <info>
+    <link url='http://en.wikipedia.org/wiki/United_Airlines'
+        text='Full entry' />
+   </info>
+  </infos>
+ </pod>
+ <pod title='Wikipedia page hits history'
+     scanner='Data'
+     id='PopularityPod:WikipediaStatsData'
+     position='700'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Log scale'
+       input='PopularityPod:WikipediaStatsData__Log scale' />
+  </states>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='Clash'
+      word='United Airlines'
+      template='Assuming &quot;${word}&quot; is ${desc1}. Use as ${desc2} instead'
+      count='3'>
+   <value name='Airline'
+       desc='an airline'
+       input='*C.United+Airlines-_*Airline-' />
+   <value name='Financial'
+       desc='a financial entity'
+       input='*C.United+Airlines-_*Financial-' />
+   <value name='Internet'
+       desc='an internet domain'
+       input='*C.United+Airlines-_*Internet-' />
+  </assumption>
+ </assumptions>
+ <warnings count='1'>
+  <reinterpret text='Using closest Wolfram|Alpha interpretation:'
+      new='United Airlines'
+      score='0.555556'
+      level='medium' />
+ </warnings>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/AirlineDataSourceInformationNotes.html'
+      text='Airline data' />
+ </sources>
+</queryresult>

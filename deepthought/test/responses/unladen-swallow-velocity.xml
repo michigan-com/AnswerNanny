@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='5'
+    datatypes=''
+    timedout=''
+    timedoutpods=''
+    timing='1.444'
+    parsetiming='0.462'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa1281h23f7b050i3c5eh00001iife1747e7036d9'
+    host='http://www4f.wolframalpha.com'
+    server='59'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa1291h23f7b050i3c5eh000046c36b6a521e6ifa&amp;s=59'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:1.44406'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>estimated average cruising airspeed of an unladen European swallow</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>11 m/s  (meters per second)
+(asked, but not answered, about a general swallow in the 1975 film Monty Python and the Holy Grail)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Unit conversions'
+     scanner='Unit'
+     id='UnitConversion'
+     position='300'
+     error='false'
+     numsubpods='5'>
+  <subpod title=''>
+   <plaintext>590 miles per day</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>25 mph  (miles per hour)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>0.41 mi/min  (miles per minute)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>36 ft/s  (feet per second)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>130000 ft/h  (feet per hour)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='UnitConversion__More' />
+  </states>
+ </pod>
+ <pod title='Comparisons as speed'
+     scanner='Unit'
+     id='ComparisonAsSpeed'
+     position='400'
+     error='false'
+     numsubpods='3'>
+  <subpod title=''>
+   <plaintext> ≈ 0.89 × maximum speed of the world&apos;s fastest human (fastest 20 meter split by Usain Bolt in the 100‐meter dash) (≈ 12 m/s )</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext> ≈ 1.1 × average speed of the world&apos;s fastest human (Usain Bolt in the 100‐meter dash) (≈ 10 m/s )</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext> ≈ 1.1 × speed of a tsunami wave at a depth of 10 meters (≈ 36 km/h )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Corresponding quantities'
+     scanner='Unit'
+     id='CorrespondingQuantity'
+     position='500'
+     error='false'
+     numsubpods='2'>
+  <subpod title=''>
+   <plaintext>Time to travel 1 meter from td/v:
+  | 91 ms  (milliseconds)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Time to travel 1 kilometer from td/v:
+  | 91 seconds
+  | 1.5 minutes</plaintext>
+  </subpod>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='SubCategory'
+      word='What is the airspeed velocity of an unladen swallow'
+      template='Assuming ${desc1}. Use ${desc2} instead'
+      count='2'>
+   <value name='AirSpeedVelocityOfAnUnladenEuropeanSwallow'
+       desc='estimated average cruising airspeed of an unladen European swallow'
+       input='*DPClash.MiscellaneousE.What+is+the+airspeed+velocity+of+an+unladen+swallow-_*AirSpeedVelocityOfAnUnladenEuropeanSwallow-' />
+   <value name='AirSpeedVelocityOfAnUnladenAfricanSwallow'
+       desc='estimated average cruising airspeed of an unladen African swallow'
+       input='*DPClash.MiscellaneousE.What+is+the+airspeed+velocity+of+an+unladen+swallow-_*AirSpeedVelocityOfAnUnladenAfricanSwallow-' />
+  </assumption>
+ </assumptions>
+</queryresult>

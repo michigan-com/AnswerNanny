@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='2'
+    datatypes='StringEncoding'
+    timedout=''
+    timedoutpods=''
+    timing='1.24'
+    parsetiming='0.934'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa24231cacd4e45f1cdae000003g673he4b1e0gahb'
+    host='http://www5b.wolframalpha.com'
+    server='51'
+    related='http://www5b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa24241cacd4e45f1cdae000001dh986be48he0ghf&amp;s=51'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:1.24002'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Morse code | Michigan</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Morse code translation'
+     scanner='StringEncodings'
+     id='MorseCodeTranslation'
+     position='200'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>-- .. -.-. .... .. --. .- -.</plaintext>
+  </subpod>
+ </pod>
+</queryresult>

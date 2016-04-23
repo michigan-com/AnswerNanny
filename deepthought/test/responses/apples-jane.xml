@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='4'
+    datatypes=''
+    timedout=''
+    timedoutpods=''
+    timing='4.842'
+    parsetiming='3.581'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa22801bif136diad2ge7d00003c84g78c00g6a818'
+    host='http://www5a.wolframalpha.com'
+    server='34'
+    related='http://www5a.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa22811bif136diad2ge7d000033hf5e2868iac466&amp;s=34'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:4.84175'>
+ <pod title='Input interpretation'
+     scanner='MathWordProblems'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>I have 12 apples.
+Jane has 7 apples.
+Jane gives 2 apples to me.
+How many more apples do I have than Jane?</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='MathWordProblems'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>I have 9 apples more than Jane has.</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Calculations'
+     scanner='MathWordProblems'
+     id='Calculations'
+     position='300'
+     error='false'
+     numsubpods='3'>
+  <subpod title=''>
+   <plaintext>My apples:      12 + 2  14</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Jane&apos;s apples:      7 - 2  5</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Difference:      14 - 5  9</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Manipulatives illustration'
+     scanner='MathWordProblems'
+     id='ManipulativesIllustration'
+     position='400'
+     error='false'
+     numsubpods='3'>
+  <subpod title=''>
+   <plaintext>My apples:       | + |  |  | 
+12 |  | 2 |  | 14</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Jane&apos;s apples:       | - |  |  | 
+7 |  | 2 |  | 5</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Difference:       | - |  |  | 
+14 |  | 5 |  | 9</plaintext>
+  </subpod>
+ </pod>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/GivenNameDataSourceInformationNotes.html'
+      text='Given name data' />
+ </sources>
+</queryresult>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='5'
+    datatypes='Financial'
+    timedout=''
+    timedoutpods=''
+    timing='7.31'
+    parsetiming='0.332'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa19601h3674349ihcf5dc00001i8g851d1hg47c4a'
+    host='http://www4b.wolframalpha.com'
+    server='57'
+    related='http://www4b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa19611h3674349ihcf5dc00000ed9f7iid23cc9a66036121367487377566'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:7.30974'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Microsoft  (MSFT)  |  Apple  (AAPL)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Latest trades'
+     scanner='FinancialData'
+     id='Quote'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>MSFT | $51.78  (MSFT | NASDAQ | 4:00:00 pm EDT | 21 hrs 6 mins ago)
+AAPL | $105.68  (AAPL | NASDAQ | 4:00:00 pm EDT | 21 hrs 6 mins ago)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='Quote__More' />
+  </states>
+ </pod>
+ <pod title='Analyst ratings'
+     scanner='Data'
+     id='ZacksAnalystRatings:FinancialData'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Microsoft  (MSFT) | moderate buy  (mean score: 1.67) (Friday, April 22, 2016)
+Apple  (AAPL) | moderate buy  (mean score: 1.50) (Friday, April 22, 2016)
+(Microsoft: 18 analysts, Apple: 30 analysts)</plaintext>
+  </subpod>
+  <states count='2'>
+   <state name='Show breakdown'
+       input='ZacksAnalystRatings:FinancialData__Show breakdown' />
+   <state name='Show history'
+       input='ZacksAnalystRatings:FinancialData__Show history' />
+  </states>
+  <definitions count='1'>
+   <definition word='mean score'
+       desc='1.0-1.49 = strong buy, 1.5-2.49 = moderate buy, 2.5-3.49 = hold, 3.5-4.49 = moderate sell, and 4.5-5.0 = strong sell.' />
+  </definitions>
+  <notes count='1'>
+   <note>Data provided by ZACKS Investment Research, Inc, www.zacks.com.</note>
+  </notes>
+ </pod>
+ <pod title='Company logos'
+     scanner='Data'
+     id='Image:FinancialData'
+     position='900'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <pod title='Wikipedia summary'
+     scanner='Data'
+     id='WikipediaSummary:FinancialData'
+     position='1000'
+     error='false'
+     numsubpods='2'>
+  <subpod title='Microsoft'>
+   <plaintext></plaintext>
+  </subpod>
+  <subpod title='Apple'>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='Clash'
+      word='Microsoft'
+      template='Assuming &quot;${word}&quot; is ${desc1}. Use as ${desc2} instead'
+      count='2'>
+   <value name='Financial'
+       desc='a financial entity'
+       input='*C.Microsoft-_*Financial-' />
+   <value name='Internet'
+       desc='an internet domain'
+       input='*C.Microsoft-_*Internet-' />
+  </assumption>
+ </assumptions>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/FinancialDataSourceInformationNotes.html'
+      text='Financial data' />
+ </sources>
+</queryresult>

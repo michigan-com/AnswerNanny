@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='5'
+    datatypes='ConsumerProductsPTE'
+    timedout='Identity'
+    timedoutpods=''
+    timing='3.707'
+    parsetiming='0.807'
+    parsetimedout='false'
+    recalculate='http://www4f.wolframalpha.com/api/v2/recalc.jsp?id=MSPa51521cb81838hf2gh8h9000012dbhdbdh87b0fha&amp;s=56'
+    id='MSPa51531cb81838hf2gh8h9000037539864151ih420'
+    host='http://www4f.wolframalpha.com'
+    server='56'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa51541cb81838hf2gh8h900005ea2d8gd8ee30h50&amp;s=56'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:3.70692'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Apple iPhone 6s and 6 Pluses | regular price</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Summary'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>median | $799.99
+highest | $999.99  (9 consumer products)
+lowest | $549.99  (3 consumer products)
+distribution | </plaintext>
+  </subpod>
+ </pod>
+ <pod title='Local currency conversion'
+     scanner='Money'
+     id='LocalCurrencyConversion'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> руб53480  (Russian rubles)  (at current quoted rate)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Regular price rankings'
+     scanner='Data'
+     id='PropertyRanking:ConsumerProductsPTEData'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>1 | Apple ‐ iPhone 6 Plus 128GB ‐ Gold (Sprint) | $999.99
+2 | Apple ‐ iPhone 6 Plus 128GB ‐ Silver (Sprint) | $999.99
+3 | Apple ‐ iPhone 6 Plus 128GB ‐ Space Gray (Sprint) | $999.99
+4 | Apple ‐ iPhone 6 Plus 128GB ‐ Gold (Verizon Wireless) | $999.99
+5 | Apple ‐ iPhone 6 Plus 128GB ‐ Silver (Verizon Wireless) | $999.99
+⋮ |   |  
+51 | Apple ‐ iPhone 6 16GB ‐ Silver (AT&amp;T) | $699.99
+52 | Apple ‐ iPhone 6 16GB ‐ Space Gray (AT&amp;T) | $699.99
+53 | Boost Mobile ‐ Apple iPhone 6 16GB No‐Contract Cell Phone ‐ Silver | $549.99
+54 | Boost Mobile ‐ Apple iPhone 6 16GB No‐Contract Cell Phone ‐ Space Gray | $549.99
+55 | Apple ‐ Apple iPhone 6 16GB No‐Contract Cell Phone ‐ Gold | $549.99</plaintext>
+  </subpod>
+  <states count='2'>
+   <state name='More'
+       input='PropertyRanking:ConsumerProductsPTEData__More' />
+   <state name='Reverse'
+       input='PropertyRanking:ConsumerProductsPTEData__Reverse' />
+  </states>
+ </pod>
+ <pod title='Additional currency conversions for  $799.99  (US dollars)'
+     scanner='Money'
+     id='CurrencyConversions'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>JPY | ¥89440  (Japanese yen)
+EUR | €712.72  (euros)
+GBP | £555.34  (British pounds)
+CNY | ￥5203.37  (Chinese yuan)
+CAD | C$1013.87  (Canadian dollars)
+MXN | $13980  (Mexican pesos)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='World currencies'
+       input='CurrencyConversions__World currencies' />
+  </states>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='SubCategory'
+      word='price'
+      template='Assuming ${desc1}. Use ${desc2} instead'
+      count='2'>
+   <value name='RegularPrice'
+       desc='regular price'
+       input='*DPClash.ConsumerProductsPTEP.price-_*RegularPrice-' />
+   <value name='SalePrice'
+       desc='sale price'
+       input='*DPClash.ConsumerProductsPTEP.price-_*SalePrice-' />
+  </assumption>
+ </assumptions>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/ConsumerProductsPTEDataSourceInformationNotes.html'
+      text='Consumer products PTE data' />
+ </sources>
+</queryresult>

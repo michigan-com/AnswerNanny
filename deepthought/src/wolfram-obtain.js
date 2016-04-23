@@ -16,7 +16,7 @@ function generateWolframAlphaUrl(input) {
     'appid': WOLFRAM_APPID,
     'input': input,
     'reinterpret': 'true',
-    'location': 'Michigan',
+    'location': 'Detroit, MI',
     'format': 'plaintext',
    };
   let qs = querystring.stringify(params);

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='5'
+    datatypes='HistoricalMoney'
+    timedout=''
+    timedoutpods=''
+    timing='1.973'
+    parsetiming='0.746'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa21381d7a5b89g6i303gd00003b89938hh8bibh82'
+    host='http://www4f.wolframalpha.com'
+    server='26'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa21391d7a5b89g6i303gd000024c6083b9ib43hab&amp;s=26'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:1.97341'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>$100 (1900 US dollars) in 2015</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='HistoricalMoney'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''
+      primary='true'>
+   <plaintext>$2957.09 (2015 US dollars)
+(based on Consumer Price Index)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='History'
+     scanner='HistoricalMoney'
+     id='History'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Linear scale'
+       input='History__Linear scale' />
+  </states>
+ </pod>
+ <pod title='Average rate of inflation'
+     scanner='HistoricalMoney'
+     id='AverageRateOfInflation'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>2.99% per year</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Total inflation factor'
+     scanner='HistoricalMoney'
+     id='TotalRateOfInflation'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>29.57 ×</plaintext>
+  </subpod>
+ </pod>
+</queryresult>

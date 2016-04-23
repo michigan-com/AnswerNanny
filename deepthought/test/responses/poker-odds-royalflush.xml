@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='5'
+    datatypes='Probability'
+    timedout=''
+    timedoutpods=''
+    timing='1.395'
+    parsetiming='0.836'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa47971c2g6452i704g8d000003966c04bggcb35fb'
+    host='http://www4f.wolframalpha.com'
+    server='57'
+    related='http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa47981c2g6452i704g8d00000189h08d6412a3adh&amp;s=57'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:1.3946'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>poker hand | type | royal flush</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Description'
+     scanner='PlayingCard'
+     id='DescriptionOfANamedPokerHand'
+     position='200'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>an ace‐high straight flush (the 10, jack, queen, king, and ace all of the same suit)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Example of a 5‐card royal flush'
+     scanner='PlayingCard'
+     id='ExampleOfA 5‐cardHand'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>10
+♠ J
+♠ Q
+♠ K
+♠ A
+♠</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Properties'
+     scanner='PlayingCard'
+     id='Properties'
+     position='400'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext> | number of possible hands | approximate probability | approximate chance
+5‐card hand | 4 | 1.539×10^-6 |  ≈  1 in 649740
+7‐card hand | 4324 | 3.232×10^-5 |  ≈  1 in 30940
+(assuming random selection from a standard 52‐card deck)
+(the value of a 7‐card hand is determined by its best 5‐card subset)</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Show derivations'
+       input='Properties__Show derivations' />
+  </states>
+ </pod>
+ <pod title='Comparisons among 5‐card poker hands'
+     scanner='PlayingCard'
+     id='ComparisonsAmong5HyphenCardPokerHands'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> | number | approximate probability | approximate chance
+hands of lesser value | 2598956 | 1-1.539×10^-6 |  =  1 in 1
+hands of this type | 4 | 1.539×10^-6 |  ≈  1 in 649740
+hands of greater value | 0 | 0 | (impossible)
+(assuming random selection from a standard 52‐card deck)</plaintext>
+  </subpod>
+ </pod>
+</queryresult>
